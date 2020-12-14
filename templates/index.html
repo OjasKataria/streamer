@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block body %}
+    <div class="twitch-button">
+        <button type="button" onclick="twitch()" class="twitch-button" id="twitch-button"><img src="https://i.pinimg.com/originals/c2/ac/f6/c2acf687fb3b0c89595ebb538da0eedd.jpg" alt="Twitch Title" width="100%"></button>
+    </div>
+    <form method="POST">
+        <div id="twitch-form" class="form-group form-inline">
+            {% if channel %}
+                <input type="text" name="channel-name" class="form-control mx-sm-3" placeholder="Twitch channel name" value="{{ channel }}">
+            {% else %}
+            <input type="text" name="channel-name" class="form-control mx-sm-3" placeholder="Twitch channel name">
+            {% endif %}
+            <button type="submit" name="twitch-button" class="btn btn-outline-info" value="Twitch">Get livestream</button>
+        </div>
+        {% if resolution %}
+            <div class="form-group" id="resolution">
+                <select name=resolution class="form-control" id=resolution-select onchange="enabletwitch()">
+                    <option selected disabled>Select stream resolution</option>
+                    {% for i in resolution %}
+                        <option value="{{ i }}">{{ i }}</option>
+                    {% endfor %}
+                </select>
+                <style>
+                    #twitch-form{
+                        display: block;
+                    }
+                </style>
+                <button type="submit" class="btn btn-outline-info" value="Twitch-Channel" disabled id="twitch-channel">Watch Stream</button>
+            </div>
+            </form>
+            {% endif %}
+    </form>
+{% endblock %}

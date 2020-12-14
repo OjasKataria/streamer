@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Video
+{% endblock %}
+    {% block body %}
+        <video-js id="my_video_1" class="vjs-default-skin vjs-big-play-centered" controls preload="auto">
+            <source src={{ link }} type="application/x-mpegURL">
+        </video-js>
+        <script>
+            videojs('my_video_1');
+        </script>
+    {% endblock %}

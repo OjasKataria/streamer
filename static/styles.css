@@ -1,0 +1,46 @@
+#my_video_1{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    position:absolute; left:0px; right:0px; top:0px; bottom:0px;
+}
+
+.twitch-button{
+    width: 50%;
+}
+
+#twitch-button{
+    width: 100%;
+    height: auto;
+    padding: 0;
+    border: none;
+    outline: none;
+    display: block;
+    background-color: rgb(2, 2, 4);
+}
+
+#twitch-form{
+    display: none;
+    padding-left: 10%;
+    padding-top: 5%;
+}
+
+#resolution{
+    padding-left: 11%;
+}
+
+#resolution-select{
+    width: 25%;
+}
+
+body{
+    background-color:rgb(2, 2, 4);
+}
+
+#twitch-channel{
+    margin-top: 1%;
+}
