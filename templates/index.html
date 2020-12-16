@@ -8,12 +8,15 @@
     <div class="twitch-button">
         <button type="button" onclick="twitch()" class="twitch-button" id="twitch-button"><img src="https://i.pinimg.com/originals/c2/ac/f6/c2acf687fb3b0c89595ebb538da0eedd.jpg" alt="Twitch Title" width="100%"></button>
     </div>
+    <div class="twitch-button" id="youtube">
+        <button type="button" class="twitch-button" id="twitch-button" name="potty"><img src="https://wallpapercave.com/wp/wp2212253.png" alt="Youtube Title" width="100%"></button>
+    </div>
     <form method="POST">
         <div id="twitch-form" class="form-group form-inline">
             {% if channel %}
                 <input type="text" name="channel-name" class="form-control mx-sm-3" placeholder="Twitch channel name" value="{{ channel }}">
             {% else %}
-            <input type="text" name="channel-name" class="form-control mx-sm-3" placeholder="Twitch channel name">
+                <input type="text" name="channel-name" class="form-control mx-sm-3" placeholder="Twitch channel name">
             {% endif %}
             <button type="submit" name="twitch-button" class="btn btn-outline-info" value="Twitch">Get livestream</button>
         </div>
@@ -30,9 +33,14 @@
                         display: block;
                     }
                 </style>
-                <button type="submit" class="btn btn-outline-info" value="Twitch-Channel" disabled id="twitch-channel">Watch Stream</button>
+                <button type="submit" class="btn btn-outline-info" value="Twitch-Channel" disabled id="twitch-channel" name="twitch-channel">Watch Stream</button>
             </div>
-            </form>
-            {% endif %}
+        {% endif %}
+    </form>
+    <form method="POST">
+        <div class="form-group form-inline" id="video-link">
+            <input type="text" name="video-link" class="form-control mx-sm-3" placeholder="Video Link or Code">
+            <button type="submit" class="btn btn-outline-info">Watch Video</button>
+        </div>
     </form>
 {% endblock %}

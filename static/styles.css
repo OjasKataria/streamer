@@ -11,6 +11,12 @@ body{
 
 .twitch-button{
     width: 50%;
+    margin: 0;
+    float: left;
+}
+
+#youtube{
+    float: right;
 }
 
 #twitch-button{
@@ -26,7 +32,7 @@ body{
 #twitch-form{
     display: none;
     padding-left: 10%;
-    padding-top: 5%;
+    padding-top: 30%;
 }
 
 #resolution{
@@ -35,6 +41,8 @@ body{
 
 #resolution-select{
     width: 25%;
+    margin: 0;
+    padding: 0;
 }
 
 body{
@@ -43,4 +51,10 @@ body{
 
 #twitch-channel{
     margin-top: 1%;
+}
+
+#video-link{
+    display: none;
+    padding-left: 50%;
+    padding-top: 30%;
 }
